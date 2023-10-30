@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("This is a repo for Chechcen Club!");
+            Console.WriteLine("The writeline has been updated!");
         }
     }
 }
