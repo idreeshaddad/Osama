@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.Design;
-using System.Net.Http.Headers;
+﻿using System.ComponentModel;
 
 namespace Osama
 {
@@ -7,52 +6,31 @@ namespace Osama
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter first drawing pattern: ");
-            string pat1 = Console.ReadLine();
+            PrintHello();
+            PrintName("Idrees Haddad");
 
-            Console.Write("Enter second drawing pattern: ");
-            string pat2 = Console.ReadLine();
+            double theBeta = GetBeta();
+            double sumResult = GetSum(1.66, 257.11);
+        }
 
-            for (int i = 1; i <= 9; i += 2)
-            {
-                for (int j = 1; j < i; j += 2)
-                {
-                    Console.Write(" ");
-                }
-                for (int x = 9; x >= i; x--)
-                {
-                    if(x % 2 == 1)
-                    {
-                        Console.Write(pat1);
-                    }
-                    else
-                    {
-                        Console.Write(pat2);
-                    }
-                }
-                Console.WriteLine();
-            }
 
-            for (int i = 9; i > 1; i -= 2)
-            {
-                for (int j = 3; j < i; j += 2)
-                {
-                    Console.Write(" ");
-                }
-                for (int x = 11; x >= i; x--)
-                {
-                    if (x % 2 == 1)
-                    {
-                        Console.Write(pat1);
-                    }
-                    else
-                    {
-                        Console.Write(pat2);
-                    }
-                }
-                Console.WriteLine();
-            }
+        static void PrintName(string name)
+        {
+            Console.WriteLine(name);
+        }
 
+        static void PrintHello()
+        {
+            Console.WriteLine("Hello World!");
+        }
+
+        static double GetBeta()
+        {
+            return 12365;
+        }
+
+        static double GetSum(double firstNumber, double secondNumber) { 
+            return firstNumber + secondNumber;
         }
     }
 }
