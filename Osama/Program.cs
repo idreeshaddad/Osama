@@ -1,36 +1,22 @@
-﻿using System.ComponentModel;
-
-namespace Osama
+﻿namespace Osama
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            PrintHello();
-            PrintName("Idrees Haddad");
+            Car idreesCar = new Car();
+            idreesCar.NumberOfCupHolder = 2;
+            idreesCar.DriveShaft = "Gold";
+            idreesCar.LicenseNumber = "20-30209";
+            idreesCar.NumberOfDoors = 4;
+            idreesCar.Accelerate();
 
-            double theBeta = GetBeta();
-            double sumResult = GetSum(1.66, 257.11);
-        }
+            Bike omarBike = new Bike();
+            omarBike.PlateNumber = "10-50207";
+            omarBike.ChainLength = "1";
+            omarBike.Accelerate();
 
-
-        static void PrintName(string name)
-        {
-            Console.WriteLine(name);
-        }
-
-        static void PrintHello()
-        {
-            Console.WriteLine("Hello World!");
-        }
-
-        static double GetBeta()
-        {
-            return 12365;
-        }
-
-        static double GetSum(double firstNumber, double secondNumber) { 
-            return firstNumber + secondNumber;
+            Vehicle v1 = new Vehicle();
         }
     }
 }
